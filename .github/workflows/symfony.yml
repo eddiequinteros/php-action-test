@@ -7,8 +7,11 @@ on:
     #branches: [ main ]
 
 jobs:
+
   phpunit:
+  
     name: Run PHPUnit test
+    
     runs-on: ubuntu-latest
     
     steps:
