@@ -16,18 +16,17 @@ jobs:
     
     steps:
 
-       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
        
-       - name: Setup PHP
-       
-         uses: shivammathur/setup-php@v2
-         with:
-             php-version: '7.4'
-             extensions: ctype, bcmath, fileinfo, json, xml
-             coverage: none
+      - name: Setup PHP
+           uses: shivammathur/setup-php@v2
+           with:
+              php-version: '7.4'
+              extensions: ctype, bcmath, fileinfo, json, mbstring, openssl, pdo, tokenizer, xml
+              coverage: none
         
-    - name: Install Composer dependencies
-      run: composer install -n --prefer-dist
+        name: Install Composer dependencies
+        run: composer install -n --prefer-dist
     
       #id: composer-cache
       #uses: actions/cache@v2
