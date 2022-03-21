@@ -27,6 +27,6 @@ jobs:
               coverage: none
         
       - name: Install Composer dependencies
-          run: composer install -n --prefer-dist
+        run: composer install -n --prefer-dist
       - name: Run test
-          run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit
